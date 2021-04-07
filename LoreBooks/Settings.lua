@@ -7,8 +7,8 @@ local db
 local defaults = {			--default settings for saved variables
 	compassMaxDistance = 0.04,
 	pinTexture = {
-		type = 2,
-		size = 31,
+		type = 1,
+		size = 26,
 		level = 40,
 	},
 	pinGrayscale = true,
