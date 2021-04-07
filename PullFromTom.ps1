@@ -1,0 +1,1 @@
+robocopy A:\LoreBooks .\LoreBooks /mir
