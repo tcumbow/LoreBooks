@@ -1,5 +1,0 @@
-{
-    "emeraldwalk.runonsave": {
-    "commands": [{"cmd": "robocopy .\\LoreBooks A:\\LoreBooks /mir"}]
-    }
-}
