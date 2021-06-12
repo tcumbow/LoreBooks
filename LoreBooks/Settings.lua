@@ -12,21 +12,21 @@ local defaults = {			--default settings for saved variables
 		level = 40,
 	},
 	pinGrayscale = true,
-	pinTextureEidetic = 4,
+	pinTextureEidetic = 1,
 	pinGrayscaleEidetic = true,
 	filters = {
-		[c.PINS_COMPASS_EIDETIC] = true,
+		[c.PINS_COMPASS_EIDETIC] = false,
 		[c.PINS_COMPASS] = true,
 		[c.PINS_UNKNOWN] = true,
 		[c.PINS_COLLECTED] = false,
-		[c.PINS_EIDETIC] = true,
+		[c.PINS_EIDETIC] = false,
 		[c.PINS_EIDETIC_COLLECTED] = false,
 	},
 	shareData = true,
 	postmailData = "",
 	postmailFirstInsert = GetTimeStamp(),
 	booksCollected = {},
-	unlockEidetic = true,
+	unlockEidetic = false,
 	steps = {},
 	immersiveMode = 1,
     questTools = {},
@@ -305,6 +305,7 @@ function LoreBooks:CreateSettings()
 				end,
 			default = immersiveChoices[defaults.immersiveMode],
 		},
+		--[[
 		{
 			type = "checkbox",
 			name = GetString(LBOOKS_UNLOCK_EIDETIC),
@@ -346,6 +347,7 @@ function LoreBooks:CreateSettings()
 			default = defaults.shareData,
 			disabled = GetWorldName() ~= "EU Megaserver" or not c.SUPPORTED_LANG[lang],
 		},
+		--]]
 	}
 	LAM:RegisterOptionControls(c.ADDON_PANEL, optionsTable)
 
